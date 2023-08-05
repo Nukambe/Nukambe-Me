@@ -1,0 +1,17 @@
+h1 {
+    position: absolute;
+    right: 0;
+    color: whitesmoke;
+    font-size: 5em;
+    opacity: 1;
+    transform: translateX(-3em);
+    transition-property: transform, opacity;
+    transition-duration: 2s, 1s;
+    transition-delay: 0s, 0.75s;
+    transition-timing-function: ease-out;
+}
+
+.faded-right {
+    opacity: 0;
+    transform: translateX(10em);
+}
