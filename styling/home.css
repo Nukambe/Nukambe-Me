@@ -1,17 +1,53 @@
-h1 {
+body {
+    overflow: hidden;
+}
+
+#h1-wrapper {
     position: absolute;
+    top: 5em;
     right: 0;
     color: whitesmoke;
-    font-size: 5em;
+    font-size: 3em;
     opacity: 1;
+    height: fit-content;
+    background-color: #303030;
     transform: translateX(-3em);
     transition-property: transform, opacity;
     transition-duration: 2s, 1s;
-    transition-delay: 0s, 0.75s;
     transition-timing-function: ease-out;
 }
 
-.faded-right {
+h1 {
+    margin: 0.1em 0 0;
+}
+
+h2 {
+    font-size: 0.5em;
+    text-align: right;
+    margin: 0 2em 0.2em;
+}
+
+#h1-wrapper.faded-right {
     opacity: 0;
     transform: translateX(10em);
+}
+
+#signature-wrapper {
+    position: absolute;
+    bottom: 30%;
+    left: 20%;
+    color: whitesmoke;
+    font-size: 3em;
+    height: fit-content;
+    background-color: #303030;
+    transition: opacity 1s ease-out;
+}
+
+#signature-wrapper.faded-out {
+    opacity: 0;
+}
+
+h3 {
+    font-style: italic;
+    margin: 0.2em 0;
 }

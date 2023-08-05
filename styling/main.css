@@ -28,8 +28,14 @@ footer {
     margin-top: 5em;
 }
 
-footer>p,
-.footer-socials {
+footer>p {
     color: whitesmoke;
     text-align: center;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: space-around;
+    width: 16%;
+    margin: 0 auto;
 }

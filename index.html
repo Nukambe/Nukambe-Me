@@ -7,29 +7,36 @@
         <title>Wesley Chappell - Software Engineer</title>
         <link href="./styling/main.css" rel="stylesheet">
         <link href="./styling/home.css" rel="stylesheet">
-        <script src="./scripts/index.js"></script>
+        <script type="module" src="./scripts/index.js"></script>
+        <script src="https://kit.fontawesome.com/cd29a81754.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
         <header>
             <nav>
-                <a href="">HOME</a>
-                <a href="">WORK</a>
-                <a href="">ABOUT</a>
-                <a href="">CONTACT</a>
+                <a id="home-button"><i class="fa-solid fa-house fa-2xl"></i></a>
+                <a id="about-button"><i class="fa-solid fa-glasses fa-2xl"></i></a>
+                <a id="work-button"><i class="fa-solid fa-briefcase fa-2xl"></i></a>
+                <a id="contact-button"><i class="fa-solid fa-address-card fa-2xl"></i></a>
             </nav>
         </header>
         <main>
-            <h1 class="faded-right">WESLEY CHAPPELL</h1>
-            <h2>SOFTWARE ENGINEER</h2>
+            <div id="h1-wrapper" class="faded-right">
+                <h1>WESLEY CHAPPELL</h1>
+                <h2>SOFTWARE ENGINEER</h2>
+            </div>
+            <div id="signature-wrapper" class="faded-out">
+                <h3>Wesley Chappell</h3>
+            </div>
         </main>
         <footer>
             <p>© 2023 Wesley Chappell</p>
             <div class="footer-socials">
-                <a href="">Github</a>
-                <a href="">LinkedIn</a>
-                <a href="">Email</a>
-                <a href="">Resume</a>
+                <a href="https://github.com/Nukambe" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
+                <a href="https://www.linkedin.com/in/weschap/" target="_blank"><i
+                        class="fa-brands fa-linkedin fa-xl"></i></a>
+                <a href="mailto:chappellwesley@gmail.com"><i class="fa-regular fa-envelope fa-xl"></i></a>
+                <a href=""><i class="fa-regular fa-file fa-xl"></i></a>
             </div>
         </footer>
     </body>
