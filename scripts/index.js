@@ -20,11 +20,26 @@ window.onload = () => {
         button: document.getElementById('work-button')
     }
     const contact = {
-        button: document.getElementById('contact-button')
+        button: document.getElementById('contact-button'),
+        details: document.getElementById('contact-details'),
+        socials: document.getElementById('contact-socials'),
+        qr: document.getElementById('qr-code')
     }
+    const description = document.getElementById('link-description');
 
     // initial load
     setTimeout(actions.showHome, 500, home, head);
+
+    Array.from(document.getElementsByTagName('a')).forEach(link => {
+        link.addEventListener('mouseenter', event => {
+            actions.hideLinkDescription(description);
+            actions.ShowLinkDescription(link, description);
+        });
+
+        link.addEventListener('mouseleave', event => {
+            actions.hideLinkDescription(description);
+        });
+    });
 
     //listeners
     home.button.addEventListener('click', event => {

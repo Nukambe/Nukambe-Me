@@ -1,22 +1,26 @@
-export const fadeIn = function (element, fade) {
+const fadeIn = function (element, fade) {
+    element.classList.add(fade);
+}
+
+const fadeOut = function (element, fade) {
     element.classList.remove(fade);
 }
 
-export const fadeOut = function (element, fade) {
-    element.classList.add(fade);
+const attachToParent = function (element, parent) {
+    parent.append(element);
 }
 
 // HOME
 export const showHome = function (home, head) {
     head.title.innerText = 'Wesley Chappell - Software Engineer';
 
-    fadeIn(home.title, 'faded-right');
-    fadeIn(home.signature, 'faded-out');
+    fadeIn(home.title, 'fadein-right');
+    fadeIn(home.signature, 'faded-in');
 }
 
 export const hideHome = function (home) {
-    fadeOut(home.title, 'faded-right');
-    fadeOut(home.signature, 'faded-out');
+    fadeOut(home.title, 'fadein-right');
+    fadeOut(home.signature, 'faded-in');
 }
 
 // ABOUT
@@ -41,9 +45,24 @@ export const hideWork = function (work) {
 //CONTACT
 export const showContact = function (contact, head) {
     head.title.innerText = 'Wesley Chappell - Contact';
+    fadeIn(contact.qr, 'faded-in');
+    fadeIn(contact.details, 'faded-in');
+    fadeIn(contact.socials, 'faded-in');
     return;
 }
 
 export const hideContact = function (contact) {
+    fadeOut(contact.qr, 'faded-in');
+    fadeOut(contact.details, 'faded-in');
+    fadeOut(contact.socials, 'faded-in');
     return;
+}
+
+export const ShowLinkDescription = function (link, description) {
+    fadeIn(description, '--visible');
+    attachToParent(description, link);
+}
+
+export const hideLinkDescription = function (description) {
+    fadeOut(description, '--visible');
 }

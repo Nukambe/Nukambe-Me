@@ -1,0 +1,44 @@
+#qr-code {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    opacity: 0;
+
+}
+
+#qr-code img {
+    border: 2px solid black;
+}
+
+h4 {
+    margin: 0.5em 0;
+    color: whitesmoke;
+    font-weight: normal;
+}
+
+#contact-details {
+    opacity: 0;
+    color: whitesmoke;
+    position: absolute;
+    top: 2em;
+    left: 8em;
+}
+
+#contact-socials {
+    margin: auto 2em 2em;
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+}
+
+#qr-code,
+#contact-details,
+#contact-socials {
+    transition: opacity 0.5s ease-in;
+}
+
+#qr-code.faded-in,
+#contact-details.faded-in,
+#contact-socials.faded-in {
+    opacity: 1;
+}

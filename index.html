@@ -7,26 +7,61 @@
         <title>Wesley Chappell - Software Engineer</title>
         <link href="./styling/main.css" rel="stylesheet">
         <link href="./styling/home.css" rel="stylesheet">
+        <link href="./styling/contact.css" rel="stylesheet">
         <script type="module" src="./scripts/index.js"></script>
         <script src="https://kit.fontawesome.com/cd29a81754.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
+        <div id="link-description">
+            <div class="link-dot">
+            </div>
+
+            <div class="link-text">
+                Link Description
+            </div>
+        </div>
         <header>
             <nav>
-                <a id="home-button"><i class="fa-solid fa-house fa-2xl"></i></a>
+                <a id="home-button" data-description="home"><i class="fa-solid fa-house fa-2xl"></i></a>
                 <a id="about-button"><i class="fa-solid fa-glasses fa-2xl"></i></a>
                 <a id="work-button"><i class="fa-solid fa-briefcase fa-2xl"></i></a>
                 <a id="contact-button"><i class="fa-solid fa-address-card fa-2xl"></i></a>
             </nav>
         </header>
         <main>
-            <div id="h1-wrapper" class="faded-right">
+            <div id="h1-wrapper">
                 <h1>WESLEY CHAPPELL</h1>
                 <h2>SOFTWARE ENGINEER</h2>
             </div>
-            <div id="signature-wrapper" class="faded-out">
-                <h3>Wesley Chappell</h3>
+
+            <div id="page-content">
+                <div id="qr-code">
+                    <a href="www.qr-code-generator.com/free-generator/?gclid=CjwKCAjww7KmBhAyEiwA5-PUSrrOxM1tueSshv6h4G4eIIyy78UcgbQfIvuf1T7HTV7FNVjU6MDiixoCiGAQAvD_BwE&campaignid=9765521724&adgroupid=106561035304&cpid=a64f8500-d236-443c-961c-a78e4b667661&gad=1"
+                        border="0" style="cursor:default" rel="nofollow"></a><img
+                        src="https://chart.googleapis.com/chart?cht=qr&chl=BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3AChappell%3BWesley%0AFN%3AWesley%20Chappell%0ATITLE%3ASoftware%20Engineer%0AADR%3A%3B%3B%3B%3B%3B%3BUnited%20States%0ATEL%3BWORK%3BVOICE%3A%0ATEL%3BCELL%3A%0ATEL%3BFAX%3A%0AEMAIL%3BWORK%3BINTERNET%3Achappellwesley%40gmail.com%0AURL%3Awesleychappell.com%0AEND%3AVCARD&chs=180x180&choe=UTF-8&chld=L|2">
+                    <h4>Add to contacts</h4>
+                </div>
+
+                <div id="contact-details">
+                    <p class="card-header">WESLEY CHAPPELL</p>
+                    <a href="mailto:chappellwesley@gmail.com">chappellwesley@gmail.com</a>
+                    <p>United States</p>
+                </div>
+
+                <div id="contact-socials">
+                    <a href="https://github.com/Nukambe" target="_blank"><i
+                            class="fa-brands fa-square-github fa-2xl"></i></a>
+                    <a href="https://www.linkedin.com/in/weschap/" target="_blank"><i
+                            class="fa-brands fa-linkedin fa-2xl"></i></a>
+                    <a href="https://leetcode.com/chappellwesley/" target="_blank"><i
+                            class="fa-solid fa-laptop-code fa-2xl"></i></a>
+                    <a href="mailto:chappellwesley@gmail.com"><i class="fa-solid fa-envelope fa-2xl"></i></a>
+                </div>
+
+                <div id="signature-wrapper">
+                    <h3>Wesley Chappell</h3>
+                </div>
             </div>
         </main>
         <footer>
@@ -34,9 +69,8 @@
             <div class="footer-socials">
                 <a href="https://github.com/Nukambe" target="_blank"><i class="fa-brands fa-github fa-xl"></i></a>
                 <a href="https://www.linkedin.com/in/weschap/" target="_blank"><i
-                        class="fa-brands fa-linkedin fa-xl"></i></a>
-                <a href="mailto:chappellwesley@gmail.com"><i class="fa-regular fa-envelope fa-xl"></i></a>
-                <a href=""><i class="fa-regular fa-file fa-xl"></i></a>
+                        class="fa-brands fa-linkedin-in fa-xl"></i></a>
+                <a href="mailto:chappellwesley@gmail.com"><i class="fa-regular fa-envelope fa-xl"></i></i></a>
             </div>
         </footer>
     </body>
