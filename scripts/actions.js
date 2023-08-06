@@ -10,6 +10,15 @@ const attachToParent = function (element, parent) {
     parent.append(element);
 }
 
+export const writeSignature = function (signature) {
+    signature.forEach(path => {
+        const length = path.getTotalLength();
+        console.log(length);
+        path.style.strokeDasharray = length;
+        path.style.strokeDashoffset = length;
+    });
+}
+
 // HOME
 export const showHome = function (home, head) {
     head.title.innerText = 'Wesley Chappell - Software Engineer';

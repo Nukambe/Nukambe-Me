@@ -26,9 +26,12 @@ window.onload = () => {
         qr: document.getElementById('qr-code')
     }
     const description = document.getElementById('link-description');
+    const signature = Array.from(document.getElementsByClassName('mask'));
 
     // initial load
     setTimeout(actions.showHome, 500, home, head);
+
+    actions.writeSignature(signature);
 
     Array.from(document.getElementsByTagName('a')).forEach(link => {
         link.addEventListener('mouseenter', event => {
