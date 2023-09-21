@@ -4,10 +4,10 @@
 
 <div>
   <nav>
-    <NavButton>HOME</NavButton>
-    <NavButton>ABOUT</NavButton>
-    <NavButton>WORK</NavButton>
-    <NavButton>CONTACT</NavButton>
+    <NavButton href="#home">HOME</NavButton>
+    <NavButton href="#about">ABOUT</NavButton>
+    <NavButton href="#work">WORK</NavButton>
+    <NavButton href="#contact">CONTACT</NavButton>
   </nav>
 </div>
 

@@ -1,5 +1,4 @@
 <script>
-  import Navigation from "./navigation/Navigation.svelte";
 </script>
 
 <div>Home Component</div>

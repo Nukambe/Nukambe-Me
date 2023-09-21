@@ -11,18 +11,22 @@
 <main>
   <Navigation />
   <div>
-    <ContentSection><Home /></ContentSection>
-    <ContentSection><About /></ContentSection>
-    <ContentSection><Work /></ContentSection>
-    <ContentSection><Contact /></ContentSection>
+    <ContentSection id="home"><Home /></ContentSection>
+    <ContentSection id="about"><About /></ContentSection>
+    <ContentSection id="work"><Work /></ContentSection>
+    <ContentSection id="contact"><Contact /></ContentSection>
   </div>
 </main>
 
 <style lang="less">
   main {
     display: flex;
+    overflow-y: hidden;
   }
   div {
     width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
   }
 </style>

@@ -1,5 +1,12 @@
 <script>
-  //
+  export let href = '';
 </script>
 
-<button><slot /></button>
+<a {href}><slot /></a>
+
+<style>
+  a {
+    text-decoration: none;
+    color: white;
+  }
+</style>
