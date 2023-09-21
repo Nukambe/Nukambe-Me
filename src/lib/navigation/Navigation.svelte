@@ -33,4 +33,10 @@
     height: 8em;
     border: 1px solid blue;
   }
+
+  @media screen and (max-width: 500px) {
+    div {
+      display: none;
+    }
+  }
 </style>

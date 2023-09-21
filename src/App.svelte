@@ -6,10 +6,12 @@
   import About from "./lib/About.svelte";
   import Work from "./lib/Work.svelte";
   import Contact from "./lib/Contact.svelte";
+  import MobileNavigation from "./lib/navigation/MobileNavigation.svelte";
 </script>
 
 <main>
   <Navigation />
+  <MobileNavigation />
   <div>
     <ContentSection id="home"><Home /></ContentSection>
     <ContentSection id="about"><About /></ContentSection>
