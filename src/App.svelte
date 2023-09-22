@@ -7,6 +7,7 @@
   import Work from "./lib/Work.svelte";
   import Contact from "./lib/Contact.svelte";
   import MobileNavigation from "./lib/navigation/MobileNavigation.svelte";
+  import Footer from "./lib/footer.svelte";
 </script>
 
 <main>
@@ -17,6 +18,7 @@
     <ContentSection id="about"><About /></ContentSection>
     <ContentSection id="work"><Work /></ContentSection>
     <ContentSection id="contact"><Contact /></ContentSection>
+    <Footer />
   </div>
 </main>
 

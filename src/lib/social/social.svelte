@@ -11,6 +11,16 @@
     a {
         text-decoration: none;
         color: white;
-        font-size: 2em;
+        height: 100%;
+        width: 100%;
+    }
+    i {
+      font-size: 2em;
+    }
+
+    @media screen and (max-width: 500px) {
+      i {
+        font-size: 3em;
+      }
     }
 </style>

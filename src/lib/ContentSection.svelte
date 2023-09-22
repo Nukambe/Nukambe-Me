@@ -23,6 +23,7 @@
     bottom: 1.5em;
     font-size: 5em;
     width: 100%;
+    z-index: -1;
   }
   p {
     margin: 0;
