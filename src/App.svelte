@@ -11,8 +11,8 @@
 
 <main>
   <Navigation />
-  <MobileNavigation />
   <div>
+    <MobileNavigation />
     <ContentSection id="home"><Home /></ContentSection>
     <ContentSection id="about"><About /></ContentSection>
     <ContentSection id="work"><Work /></ContentSection>
@@ -30,5 +30,8 @@
     height: 100vh;
     overflow-y: scroll;
     scroll-behavior: smooth;
+  }
+  div::-webkit-scrollbar {
+    display: none;
   }
 </style>

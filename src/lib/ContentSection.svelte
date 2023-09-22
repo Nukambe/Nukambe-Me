@@ -16,6 +16,7 @@
     width: 100%;
     min-height: 100vh;
     position: relative;
+    background-color: black;
   }
   .content-bg {
     position: absolute;
@@ -28,7 +29,7 @@
     width: 100%;
     font-weight: 1000;
     color: white;
-    opacity: 12%;
+    opacity: 4%;
     display: inline-block;
     -webkit-transform: @h2-scale; /* Safari and Chrome */
     -moz-transform: @h2-scale; /* Firefox */
