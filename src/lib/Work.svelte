@@ -12,6 +12,11 @@
       insightful "about me" section, offering a comprehensive glimpse into her
       versatile skills and personality.
     </Project>
+    <Project title="this" tags={["html", "css", "javascript", "svelte"]}>
+      Experience my personal portfolio website, a testament to my skills as a
+      software engineer. Explore a showcase of my diverse projects, and witness
+      my expertise in web development and design.
+    </Project>
   </div>
 </div>
 
@@ -23,5 +28,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
   }
 </style>

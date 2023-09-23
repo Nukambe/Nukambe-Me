@@ -33,6 +33,7 @@
   }
   .project-wrapper {
     width: 500px;
+    height: 500px;
     border-bottom: 0.5em solid darkgray;
   }
   .bg-gif {
@@ -49,12 +50,13 @@
   }
   .project-article {
     width: 100%;
+    height: 300px;
     background-color: gray;
   }
   .tags-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
     row-gap: 0.5em;
     column-gap: 0.5em;
     padding: 0 1em 1em;
