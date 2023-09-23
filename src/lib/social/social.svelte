@@ -3,7 +3,7 @@
   export let icon = "github"
 </script>
 
-<a {href} target="_blank">
+<a {href} target="_blank" rel="noreferrer">
   <i class="fi fi-brands-{icon}" />
 </a>
 
