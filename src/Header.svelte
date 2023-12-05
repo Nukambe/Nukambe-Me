@@ -1,29 +1,27 @@
 <script>
-  import About from "../About/About.svelte";
+  import About from "./About.svelte";
+
   const socials = [
-    { title: "title", icon: "icon", link: "link" },
-    { title: "title", icon: "icon", link: "link" },
-    { title: "title", icon: "icon", link: "link" },
-    { title: "title", icon: "icon", link: "link" },
+    { href: "/", label: "label", icon: "icon" },
+    { href: "/", label: "label", icon: "icon" },
+    { href: "/", label: "label", icon: "icon" },
   ];
 </script>
 
 <header
-  class="bg-slate-50 lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-112 lg:items-start lg:overflow-y-auto xl:w-120"
+  class="border-black border-2 overflow-y-visible lg:overflow-y-auto lg:fixed lg:h-screen lg:w-96 z-10"
 >
   <div
     class="relative z-10 mx-auto px-4 pb-4 pt-10 sm:px-6 md:max-w-2xl md:px-4 lg:min-h-full lg:flex-auto lg:border-x lg:border-slate-200 lg:px-8 lg:py-12 xl:px-12"
   >
-    <a
-      href="/"
+    <div
       class="relative mx-auto block w-48 overflow-hidden rounded-lg bg-slate-200 shadow-xl shadow-slate-200 sm:w-64 sm:rounded-xl lg:w-auto lg:rounded-2xl"
-      aria-label="Homepage"
     >
       <img class="w-full" src="Profile.jpg" alt="Profile" />
       <div
         class="absolute inset-0 rounded-lg ring-1 ring-inset ring-black/10 sm:rounded-xl lg:rounded-2xl"
       />
-    </a>
+    </div>
     <div class="mt-10 text-center lg:mt-12 lg:text-left">
       <h1 class="text-xl font-bold text-slate-900">Wesley Chappell</h1>
       <p class="mt-3 text-lg font-medium leading-8 text-slate-700">
@@ -47,12 +45,12 @@
         {#each socials as social}
           <li class="flex">
             <a
-              href={social.link}
+              href={social.href}
               class="group flex items-center"
-              aria-label={social.title}
+              aria-label={social.label}
             >
               {social.icon}
-              <span class="hidden sm:ml-3 sm:block">{social.title}</span>
+              <span class="hidden sm:ml-3 sm:block">{social.label}</span>
             </a>
           </li>
         {/each}

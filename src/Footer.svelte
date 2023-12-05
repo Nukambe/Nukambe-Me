@@ -1,5 +1,5 @@
 <script>
-  import About from "../About/About.svelte";
+  import About from "./About.svelte";
 </script>
 
 <footer
