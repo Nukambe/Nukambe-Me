@@ -1,21 +1,24 @@
 <script>
   import About from "./About.svelte";
+  import FaLinkedin from "svelte-icons/fa/FaLinkedin.svelte";
+  import FaGithubSquare from "svelte-icons/fa/FaGithubSquare.svelte";
+  import FaEnvelopeSquare from "svelte-icons/fa/FaEnvelopeSquare.svelte";
 
   const socials = [
-    { href: "/", label: "label", icon: "icon" },
-    { href: "/", label: "label", icon: "icon" },
-    { href: "/", label: "label", icon: "icon" },
+    { href: "https://www.linkedin.com/in/weschap/", label: "LinkedIn" },
+    { href: "https://github.com/Nukambe", label: "Github" },
+    { href: "mailto:chappellwesley@gmail.com", label: "Email" },
   ];
 </script>
 
 <header
-  class="overflow-y-visible lg:overflow-y-auto lg:fixed lg:h-screen lg:w-96 z-10"
+  class="overflow-y-visible lg:overflow-y-auto lg:fixed lg:h-screen lg:w-96 z-10 bg-slate-100 border-b-slate-200 border-b-2"
 >
   <div
     class="relative z-10 mx-auto px-4 pb-4 pt-10 sm:px-6 md:max-w-2xl md:px-4 lg:min-h-full lg:flex-auto lg:border-x lg:border-slate-200 lg:px-8 lg:py-12 xl:px-12"
   >
     <div
-      class="relative mx-auto block w-48 overflow-hidden rounded-lg bg-slate-200 shadow-xl shadow-slate-200 sm:w-64 sm:rounded-xl lg:w-auto lg:rounded-2xl"
+      class="relative mx-auto block w-48 overflow-hidden rounded-lg bg-slate-200 shadow-xl shadow-slate-400 sm:w-64 sm:rounded-xl lg:w-auto lg:rounded-2xl"
     >
       <img class="w-full" src="Profile.jpg" alt="Profile" />
       <div
@@ -23,7 +26,9 @@
       />
     </div>
     <div class="mt-10 text-center lg:mt-12 lg:text-left">
-      <h1 class="text-xl font-bold text-slate-900">Wesley Chappell</h1>
+      <h1 class="text-xl font-bold text-slate-900">
+        Wesley Alexander Chappell
+      </h1>
       <p class="mt-3 text-lg font-medium leading-8 text-slate-700">
         Software Engineer
       </p>
@@ -48,13 +53,26 @@
               href={social.href}
               class="group flex items-center"
               aria-label={social.label}
+              target="_blank"
+              rel="noreferrer nofollow"
             >
-              {social.icon}
+              <div class="w-8">
+                {#if social.label === "LinkedIn"}
+                  <FaLinkedin />
+                {/if}
+                {#if social.label === "Github"}
+                  <FaGithubSquare />
+                {/if}
+                {#if social.label === "Email"}
+                  <FaEnvelopeSquare />
+                {/if}
+              </div>
               <span class="hidden sm:ml-3 sm:block">{social.label}</span>
             </a>
           </li>
         {/each}
       </ul>
     </section>
+    <p class="mt-16 hidden lg:block">&copy; Wesley Chappell</p>
   </div>
 </header>

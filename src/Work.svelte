@@ -3,27 +3,51 @@
   const projects = [
     {
       id: 0,
-      title: "Title",
+      title: "Oneflix",
       description: "description...",
       href: "/",
+      tags: [""],
     },
     {
       id: 1,
-      title: "Title",
+      title: "Forms",
       description: "description...",
       href: "/",
+      tags: [
+        "Javascript",
+        "React",
+        "HTML",
+        "CSS",
+        "Express",
+        "Sequelize",
+        "PostgreSQL",
+        "Heroku",
+      ],
     },
     {
       id: 2,
-      title: "Title",
+      title: "Moriah Young",
       description: "description...",
-      href: "/",
+      href: "https://moriahyoung.com",
+      tags: ["Javascript", "React", "HTML", "CSS", "Netlify"],
     },
     {
       id: 3,
-      title: "Title",
-      description: "description...",
-      href: "/",
+      title: "Samiyah Hubbard",
+      description:
+        "Profile site for a high-school volleyball player. Developed using Next.js with a MongoDB database. Uses Next-Auth to secure the dashboard.",
+      href: "https://wonderful-alfajores-ac1bd1.netlify.app/",
+      tags: [
+        "Javascript",
+        "React",
+        "Next.js",
+        "Next-Auth",
+        "HTML",
+        "CSS",
+        "Tailwind",
+        "MongoDB",
+        "Netlify",
+      ],
     },
   ];
 </script>

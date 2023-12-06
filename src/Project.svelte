@@ -25,10 +25,21 @@
           href={project.href}
           class="flex items-center text-sm font-bold leading-6 text-red-500 hover:text-red-700 active:text-red-900"
           aria-label={`External link for ${project.title}`}
+          target="_blank"
+          rel="noreferrer nofollow"
         >
           View Project
         </a>
       </div>
+      <ul class="flex flex-wrap gap-2 mt-2">
+        {#each project.tags as tag}
+          <li
+            class="bg-red-100 rounded-full px-4 py-1 text-red-900 flex items-center"
+          >
+            {tag}
+          </li>
+        {/each}
+      </ul>
     </div>
   </Container>
 </article>
