@@ -3,11 +3,13 @@
   import FaLinkedin from "svelte-icons/fa/FaLinkedin.svelte";
   import FaGithubSquare from "svelte-icons/fa/FaGithubSquare.svelte";
   import FaEnvelopeSquare from "svelte-icons/fa/FaEnvelopeSquare.svelte";
+  import FaCloudDownloadAlt from "svelte-icons/fa/FaCloudDownloadAlt.svelte";
 
   const socials = [
     { href: "https://www.linkedin.com/in/weschap/", label: "LinkedIn" },
     { href: "https://github.com/Nukambe", label: "Github" },
     { href: "mailto:chappellwesley@gmail.com", label: "Email" },
+    { href: "/resume.pdf", label: "Resume" },
   ];
 </script>
 
@@ -65,6 +67,9 @@
                 {/if}
                 {#if social.label === "Email"}
                   <FaEnvelopeSquare />
+                {/if}
+                {#if social.label === "Resume"}
+                  <FaCloudDownloadAlt />
                 {/if}
               </div>
               <span class="hidden sm:ml-3 sm:block">{social.label}</span>

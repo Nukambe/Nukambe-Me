@@ -11,7 +11,7 @@
     About
   </h2>
   <p
-    class={`mt-2 text-base leading-7 text-slate-700 text-justify ${
+    class={`mt-2 text-base leading-7 text-slate-700 ${
       !isExpanded && "lg:line-clamp-4"
     }`}
   >
