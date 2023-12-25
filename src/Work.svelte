@@ -25,7 +25,7 @@
         },
       ],
       description:
-        "Developed a form-building application with a React front-end, Express back-end, and PostgreSQL database. The user-friendly interface facilitates seamless form creation and management, while the reliable Express backend and PostgreSQL ensure efficient data handling. This project provides a straightforward and scalable solution for creating and managing forms.",
+        "Built using React, Express, and PostgreSQL, Marci-Forms a form app that offers a seamless experience for creating and managing custom forms, and visualizing submissions. The user-friendly interface ensures effortless form handling, while submission data is displayed with Chart.js. The combination of React, Express, and PostgreSQL guarantees reliability and efficient data management, making the app a comprehensive solution for diverse form-related tasks.",
       href: "https://marci-forms-565726e4ad6e.herokuapp.com/",
       tags: [
         "Javascript",

@@ -29,7 +29,7 @@
     </div>
     <div class="mt-10 text-center lg:mt-12 lg:text-left">
       <h1 class="text-xl font-bold text-slate-900">
-        Wesley Alexander Chappell
+        Wesley Chappell
       </h1>
       <p class="mt-3 text-lg font-medium leading-8 text-slate-700">
         Software Engineer
