@@ -9,7 +9,7 @@
     { href: "https://www.linkedin.com/in/weschap/", label: "LinkedIn" },
     { href: "https://github.com/Nukambe", label: "Github" },
     { href: "mailto:chappellwesley@gmail.com", label: "Email" },
-    { href: "/resume.pdf", label: "Resume" },
+    { href: "/WesleyChappellResumeSWE.pdf", label: "Resume" },
   ];
 </script>
 
