@@ -6,7 +6,7 @@
       title: "Meal Planner",
       description: "Coming Soon...",
       href: "#",
-      tags: [],
+      tags: ["JavaScript", "TypeScript", "HTML", "CSS"],
     },
     {
       id: 1,
@@ -28,7 +28,7 @@
         "Built using React, Express, and PostgreSQL, Marci-Forms a form app that offers a seamless experience for creating and managing custom forms, and visualizing submissions. The user-friendly interface ensures effortless form handling, while submission data is displayed with Chart.js. The combination of React, Express, and PostgreSQL guarantees reliability and efficient data management, making the app a comprehensive solution for diverse form-related tasks.",
       href: "https://marci-forms-565726e4ad6e.herokuapp.com/",
       tags: [
-        "Javascript",
+        "JavaScript",
         "React",
         "HTML",
         "CSS",
@@ -47,7 +47,7 @@
         "Built a profile website for a voice and on screen actress using React. The site serves as a showcase for her talents in the entertainment industry, providing a clean and user-friendly experience. Emphasizing simplicity, the design allows visitors to easily explore the actress's portfolio. The use of React ensures a smooth and responsive interface, putting her professional skills in the spotlight.",
 
       href: "https://moriahyoung.com",
-      tags: ["Javascript", "React", "HTML", "CSS", "Tailwind", "Netlify"],
+      tags: ["JavaScript", "React", "HTML", "CSS", "Tailwind", "Netlify"],
     },
     {
       id: 3,
@@ -57,7 +57,7 @@
         "Created a profile site for a high-school volleyball player, utilizing Next.js and MongoDB for a responsive and data-driven experience. The project features a secure dashboard powered by Next-Auth. This site blends technical expertise with a focus on delivering a polished and functional platform for showcasing the athlete's accomplishments.",
       href: "https://wonderful-alfajores-ac1bd1.netlify.app/",
       tags: [
-        "Javascript",
+        "JavaScript",
         "React",
         "Next.js",
         "Next-Auth",

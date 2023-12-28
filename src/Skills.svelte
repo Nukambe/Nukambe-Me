@@ -4,7 +4,8 @@
     {
       label: "Front End",
       skills: [
-        "Javascript",
+        "JavaScript",
+        "TypeScript",
         "React",
         "Next.js",
         "Svelte",
@@ -16,7 +17,7 @@
     },
     {
       label: "Back End",
-      skills: ["Javascript", "Express", "Next.js", "Sequelize"],
+      skills: ["JavaScript", "TypeScript", "Express", "Next.js", "Sequelize"],
     },
     { label: "Database", skills: ["PostgreSQL", "Sqlite", "MongoDB"] },
   ];
