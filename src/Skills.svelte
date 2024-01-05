@@ -4,22 +4,32 @@
     {
       label: "Front End",
       skills: [
+        "HTML",
         "JavaScript",
         "TypeScript",
         "React",
-        "Next.js",
+        "Angular",
         "Svelte",
-        "HTML",
-        "CSS",
+        "Next.js",
         "Redux",
+        "CSS",
         "Tailwind",
+        "Bootstrap",
       ],
     },
     {
       label: "Back End",
-      skills: ["JavaScript", "TypeScript", "Express", "Next.js", "Sequelize"],
+      skills: [
+        "JavaScript",
+        "TypeScript",
+        "Express",
+        "Next.js",
+        "NestJS",
+        "Sequelize",
+      ],
     },
-    { label: "Database", skills: ["PostgreSQL", "Sqlite", "MongoDB"] },
+    { label: "Database", skills: ["SQL", "PostgreSQL", "Sqlite", "MongoDB"] },
+    { label: "Tools", skills: ["Git", "Node.js", "VS Code"] },
   ];
 </script>
 

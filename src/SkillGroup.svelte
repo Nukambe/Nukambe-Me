@@ -11,7 +11,7 @@
     <ul role="list" class="mx-auto mt-4 flex flex-wrap items-start gap-4">
       {#each group.skills as skill}
         <li
-          class="text-center min-w-[100px] bg-red-500 text-white rounded-md py-1 font-semibold"
+          class="text-center min-w-[100px] bg-slate-500 text-white rounded-md py-1 font-semibold"
           aria-label={`Tag, ${skill}`}
         >
           {skill}

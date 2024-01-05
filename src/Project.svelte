@@ -79,7 +79,7 @@
       <ul class="flex flex-wrap gap-2 mt-2">
         {#each project.tags as tag}
           <li
-            class="bg-red-100 rounded-full px-4 py-1 text-red-900 flex items-center"
+            class="bg-slate-900 rounded-full px-4 py-1 text-white font-semibold flex items-center"
           >
             {tag}
           </li>

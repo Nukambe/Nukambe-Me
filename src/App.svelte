@@ -2,6 +2,7 @@
   import Header from "./Header.svelte";
   import Main from "./Main.svelte";
   import Footer from "./Footer.svelte";
+  import Mouse from "./Mouse.svelte";
 </script>
 
 <div class="lg:flex h-screen w-full relative">
@@ -12,6 +13,7 @@
   <Main />
   <Footer />
 </div>
+<Mouse />
 
 <style>
 </style>
