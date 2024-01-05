@@ -6,7 +6,6 @@
   function handleMouseMove(event) {
     mouse.x = event.pageX;
     mouse.y = event.pageY;
-    console.log(mouse);
   }
 </script>
 

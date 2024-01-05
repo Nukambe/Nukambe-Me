@@ -1,11 +1,10 @@
 <script>
   import Container from "./Container.svelte";
-  export let project = {
-    id: 0,
-    title: "Title",
-    description: "description...",
-    href: "/",
-  };
+  export let project;
+
+  function classList(...classes) {
+    return classes.filter(Boolean).join(" ");
+  }
 </script>
 
 <article aria-labelledby={`project-${project.id}-title`} class="py-10 sm:py-12">
@@ -40,17 +39,19 @@
         {/if}
       </div>
       <div class="mt-4 flex flex-col items-center gap-4">
-        <a
-          href={project.href}
-          class={`w-full text-md font-bold leading-6 text-red-500 hover:text-red-700 active:text-red-900 ${
-            project.href === "#" ? "pointer-events-none cursor-none" : ""
-          }}`}
-          aria-label={`External link for ${project.title}`}
-          target="_blank"
-          rel="noreferrer nofollow"
-        >
-          View Project
-        </a>
+        <div class="flex gap-4 w-full">
+          {#each project.links as link}
+            <a
+              href={link.href}
+              class={classList("font-bold", link.color)}
+              aria-label={`External link for ${project.title}`}
+              target="_blank"
+              rel="noreferrer nofollow"
+            >
+              {link.label}
+            </a>
+          {/each}
+        </div>
         {#if project.demoLogin}
           <div class="my-2">
             <p class="text-sm font-bold leading-6 text-red-400 mb-2">
