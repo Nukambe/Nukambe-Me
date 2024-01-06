@@ -9,12 +9,12 @@
         {
           label: "View Front End",
           href: "https://github.com/Nukambe/meal-planner-frontend",
-          color: "text-red-600 hover:text-red-800",
+          color: "text-red-500 hover:text-red-800",
         },
         {
           label: "View Back End",
           href: "https://github.com/Nukambe/meal-planner-backend",
-          color: "text-red-600 hover:text-red-800",
+          color: "text-red-500 hover:text-red-800",
         },
       ],
       tags: [
@@ -49,7 +49,7 @@
         {
           label: "View App",
           href: "https://marci-forms-565726e4ad6e.herokuapp.com/",
-          color: "text-emerald-600 hover:text-emerald-800",
+          color: "text-red-500 hover:text-red-800",
         },
       ],
       tags: [
@@ -72,9 +72,9 @@
         "Built a profile website for a voice and on screen actress using React. The site serves as a showcase for her talents in the entertainment industry, providing a clean and user-friendly experience. Emphasizing simplicity, the design allows visitors to easily explore the actress's portfolio. The use of React ensures a smooth and responsive interface, putting her professional skills in the spotlight.",
       links: [
         {
-          label: "View Site",
+          label: "Visit Site",
           href: "https://moriahyoung.com",
-          color: "text-rose-600 hover:text-rose-800",
+          color: "text-red-500 hover:text-red-800",
         },
         {
           label: "View Code",
@@ -92,9 +92,9 @@
         "Created a profile site for a high-school volleyball player, utilizing Next.js and MongoDB for a responsive and data-driven experience. The project features a secure dashboard powered by Next-Auth. This site blends technical expertise with a focus on delivering a polished and functional platform for showcasing the athlete's accomplishments.",
       links: [
         {
-          label: "View Site",
+          label: "Visit Site",
           href: "https://wonderful-alfajores-ac1bd1.netlify.app/",
-          color: "text-cyan-600 hover:text-cyan-800",
+          color: "text-red-500 hover:text-red-800",
         },
         {
           label: "View Code",
