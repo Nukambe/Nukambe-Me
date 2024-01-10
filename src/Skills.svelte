@@ -29,7 +29,7 @@
       ],
     },
     { label: "Database", skills: ["SQL", "PostgreSQL", "Sqlite", "MongoDB"] },
-    { label: "Tools", skills: ["Git", "Node.js", "VS Code"] },
+    { label: "Tools", skills: ["Git", "Node.js", "VS Code", "Jest"] },
   ];
 </script>
 
