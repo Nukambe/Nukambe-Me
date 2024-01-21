@@ -10,10 +10,10 @@
     { href: "https://www.linkedin.com/in/weschap/", label: "LinkedIn" },
     { href: "https://github.com/Nukambe", label: "Github" },
     { href: "mailto:chappellwesley@gmail.com", label: "Email" },
-    {
-      href: "https://1drv.ms/b/s!AhdWrhpAEUpppj1GIWabQwqR5fTr",
-      label: "Resume",
-    },
+    // {
+    //   href: "https://1drv.ms/b/s!AhdWrhpAEUpppj1GIWabQwqR5fTr",
+    //   label: "Resume",
+    // },
   ];
 </script>
 
