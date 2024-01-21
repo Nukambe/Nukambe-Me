@@ -1,16 +1,17 @@
 <script>
-  import { Motion, animate } from "svelte-motion";
+  import { Motion } from "svelte-motion";
   import Container from "./Container.svelte";
   export let project;
+  export let index;
 
-  function classList(...classes) {
-    return classes.filter(Boolean).join(" ");
-  }
+  // function classList(...classes) {
+  //   return classes.filter(Boolean).join(" ");
+  // }
 </script>
 
 <Motion
   animate={{ y: [100, 0], opacity: [0, 1] }}
-  transition={{ duration: 1.5, delay: 0.5 + 0.8 * project.id }}
+  transition={{ duration: 1.2, delay: 0.5 + 0.5 * index }}
   let:motion
 >
   <article
@@ -27,22 +28,24 @@
               class="mt-2 text-lg font-bold text-slate-900"
             >
               <a
-                href={project.href}
-                aria-label={`External link for ${project.title}`}
+                href={project.link}
+                aria-label={`External link for ${project.name}`}
                 target="_blank"
                 rel="noreferrer nofollow"
-                class={project.href === "#"
+                class={project.link === "#"
                   ? "pointer-events-none cursor-none"
-                  : ""}>{project.title}</a
+                  : ""}>{project.name}</a
               >
             </h2>
-            <p class="mt-1 text-base leading-7 text-slate-700">
-              {project.description}
-            </p>
+            <ul class="mt-1 text-base leading-7 text-slate-700">
+              {#each project.description as desc}
+                <li class="list-disc ml-4">{desc}</li>
+              {/each}
+            </ul>
           </div>
-          {#if project.gif}
+          {#if project.image}
             <img
-              src={project.gif}
+              src={project.image}
               alt="project gif"
               class="w-full my-8 xl:w-96 shadow-lg"
             />
@@ -50,25 +53,36 @@
         </div>
         <div class="mt-4 flex flex-col items-center gap-4">
           <div class="flex gap-4 w-full">
-            {#each project.links as link}
+            {#if project.link}
               <a
-                href={link.href}
-                class={classList("font-bold", link.color)}
-                aria-label={`External link for ${project.title}`}
+                href={project.link}
+                class="font-bold text-red-600 hover:text-red-800"
+                aria-label={`External link for ${project.name}`}
                 target="_blank"
                 rel="noreferrer nofollow"
               >
-                {link.label}
+                View Project
               </a>
-            {/each}
+            {/if}
+            {#if project.code}
+              <a
+                href={project.code}
+                class="font-bold text-slate-600 hover:text-slate-800"
+                aria-label={`External link for ${project.name}`}
+                target="_blank"
+                rel="noreferrer nofollow"
+              >
+                View Code
+              </a>
+            {/if}
           </div>
-          {#if project.demoLogin}
+          {#if project.credentials}
             <div class="my-2">
               <p class="text-sm font-bold leading-6 text-red-400 mb-2">
                 Demo Logins
               </p>
               <ul class="flex gap-x-8">
-                {#each project.demoLogin as login}
+                {#each project.credentials as login}
                   <li>
                     <p class="text-sm text-red-400 leading-4 font-bold">
                       {login.id}:
@@ -88,11 +102,11 @@
           {/if}
         </div>
         <ul class="flex flex-wrap gap-2 mt-2">
-          {#each project.tags as tag}
+          {#each project.technologies as tech}
             <li
               class="bg-slate-900 rounded-full px-4 py-1 text-white font-semibold flex items-center"
             >
-              {tag}
+              {tech}
             </li>
           {/each}
         </ul>
