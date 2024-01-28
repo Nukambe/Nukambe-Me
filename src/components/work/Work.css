@@ -1,0 +1,15 @@
+#work-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#work-gallery {
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  height: fit-content;
+  padding: 0 5em;
+  column-gap: 1.5em;
+}

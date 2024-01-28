@@ -1,12 +1,16 @@
-import { Routes, Route } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
 
 import Landing from "./components/landing/Landing";
+import Work from "./components/work/Work";
+
+import "./App.css";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" Component={Landing} />
-    </Routes>
+    <>
+      <Landing />
+      <Work />
+    </>
   );
 }
 
