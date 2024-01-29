@@ -13,7 +13,7 @@ export default function WorkModal({ project, closeModal }) {
         whileTap={{ scale: 0.95 }}
         onClick={() => closeModal()}
       >
-        <img src="images/ui/close.png" alt="Close" />
+        <img src="images/ui/close.svg" alt="Close" />
       </motion.button>
       <img
         id="modal-image"

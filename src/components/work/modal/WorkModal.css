@@ -17,6 +17,9 @@
   align-items: center;
   background-color: unset;
   border: unset;
+  height: 64px;
+  width: 64px;
+  cursor: pointer;
 }
 
 #modal-image {

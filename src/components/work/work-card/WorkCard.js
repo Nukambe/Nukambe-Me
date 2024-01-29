@@ -60,24 +60,28 @@ export default function WorkCard({ id, project }) {
         </ul>
         <div className="card-btn-container">
           {project.site && (
-            <a
+            <motion.a
               href={project.site}
               target="_blank"
               rel="noopener noreferrer"
               className="card-btn"
+              whileHover={{ y: -4 }}
+              transition={{ duration: 0.1 }}
             >
               View Project
-            </a>
+            </motion.a>
           )}
           {project.code && (
-            <a
+            <motion.a
               href={project.code}
               target="_blank"
               rel="noopener noreferrer"
               className="card-btn"
+              whileHover={{ y: -4 }}
+              transition={{ duration: 0.1 }}
             >
               View Code
-            </a>
+            </motion.a>
           )}
         </div>
       </div>

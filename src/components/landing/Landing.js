@@ -48,10 +48,26 @@ const fromTop = {
 //   },
 // };
 
-// const enterSite = () => {
-//   const work = document.getElementsByClassName("page-container")[1];
-//   window.scrollTo({ top: work.offsetTop, behavior: "smooth" });
-// };
+const enterSite = () => {
+  const work = document.getElementsByClassName("page-container")[0];
+  window.scrollTo({ top: work.offsetTop, behavior: "smooth" });
+};
+
+function AnimatedChevron({ id }) {
+  return (
+    <motion.img
+      src="images/ui/chevronDown.svg"
+      alt="chevronDown"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        delay: id * 0.4,
+        repeat: Infinity,
+        duration: 1.5,
+      }}
+    />
+  );
+}
 
 export default function Landing() {
   return (
@@ -70,12 +86,21 @@ export default function Landing() {
       <motion.h1 id="wesley-chappell" variants={fromTop}>
         Wesley Chappell
       </motion.h1>
-      <motion.div id="software-engineer" variants={fromTop}>
+      <motion.div variants={fromTop}>
         <Title />
       </motion.div>
       <div style={{ height: "3rem", width: "100%" }}>
         <div id="landing-bar" />
       </div>
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        id="chevron-container"
+        onClick={() => enterSite()}
+      >
+        <AnimatedChevron id={0} />
+        <AnimatedChevron id={1} />
+        <AnimatedChevron id={2} />
+      </motion.div>
       {/* <motion.button
           className="landing-btn"
           id="btn-intro-open"
