@@ -35,12 +35,7 @@ export default function Socials() {
   }, []);
 
   return (
-    <motion.div
-      id="social-container"
-      style={{
-        top: scrollY < 500 ? "90vh" : "4vh",
-      }}
-    >
+    <motion.div id="social-container" className={scrollY < 500 ? "" : "top"}>
       <motion.div id="social-content" whileHover={{ scale: 1.1 }}>
         {socials.map((social, index) => (
           <motion.a
