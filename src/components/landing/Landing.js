@@ -6,7 +6,7 @@ const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      delay: 1.5,
+      delay: 1,
       duration: 0.5,
       when: "beforeChildren",
       staggerChildren: 0.4,
@@ -17,7 +17,7 @@ const containerVariants = {
 const fromTop = {
   hidden: {
     opacity: 0,
-    y: -200,
+    y: -24,
   },
   visible: {
     opacity: 1,
@@ -34,7 +34,7 @@ const fromTop = {
 const fromBottom = {
   hidden: {
     opacity: 0,
-    y: 200,
+    y: 24,
   },
   visible: {
     opacity: 1,
@@ -46,6 +46,11 @@ const fromBottom = {
       type: "spring",
     },
   },
+};
+
+const enterSite = () => {
+  const work = document.getElementsByClassName("page-container")[1];
+  window.scrollTo({ top: work.offsetTop, behavior: "smooth" });
 };
 
 export default function Landing() {
@@ -72,19 +77,24 @@ export default function Landing() {
         <div style={{ height: "3rem", width: "100%" }}>
           <div id="landing-bar" />
         </div>
-        <motion.button
+        {/* <motion.button
           className="landing-btn"
           id="btn-intro-open"
           variants={fromBottom}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
         >
           View Intro Video
-        </motion.button>
+        </motion.button> */}
         <motion.button
           className="landing-btn"
           id="btn-enter-site"
           variants={fromBottom}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={enterSite}
         >
-          Enter Site
+          View Work
         </motion.button>
       </motion.div>
     </div>

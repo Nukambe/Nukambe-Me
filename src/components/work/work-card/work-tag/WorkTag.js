@@ -3,13 +3,15 @@ export default function WorkTag({ tag }) {
     <div
       className="work-tag"
       style={{
-        backgroundColor: "gray",
+        backgroundColor: "#B7950B",
         borderRadius: "99em",
         display: "inline-block",
-        padding: "0.5em 1em",
+        padding: "0.2rem 1em",
+        color: "white",
+        fontSize: "11px",
       }}
     >
-      <span>{tag}</span>
+      {tag}
     </div>
   );
 }

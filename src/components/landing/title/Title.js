@@ -3,10 +3,9 @@ import "./Title.css";
 
 const titles = [
   "Frontend Developer",
-  "Problem Solver",
   "Software Engineer",
   "Full Stack Developer",
-  "Continuous Learner",
+  "Problem Solver",
 ];
 
 export default function Title() {
@@ -29,6 +28,10 @@ export default function Title() {
       <h2 ref={titleRef} id="software-engineer" data-reflow="0">
         {titles[title]}
       </h2>
+      <p style={{ fontSize: "0.8em" }}>
+        I'm a software engineer based in the United States. I specialize in
+        building exceptional websites, applications, and everything in between.
+      </p>
     </div>
   );
 }

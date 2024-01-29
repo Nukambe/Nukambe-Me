@@ -1,32 +1,86 @@
 import React from "react";
+import { motion } from "framer-motion";
 import WorkTag from "./work-tag/WorkTag";
 import "./WorkCard.css";
 
-export default function WorkCard({ project }) {
+function CardWrapper({ id, children }) {
+  return (
+    <>
+      <motion.div
+        className="card-wrapper-desktop work-card"
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: { delay: (id % 3) * 0.1, duration: 0.5 },
+        }}
+        viewport={{ once: true }}
+        whileHover={{ scale: 1.05 }}
+      >
+        {children}
+      </motion.div>
+      <motion.div
+        whileHover={{ y: -16 }}
+        className="card-wrapper-mobile work-card"
+      >
+        {children}
+      </motion.div>
+    </>
+  );
+}
+
+export default function WorkCard({ id, project }) {
   if (!project) return null;
 
   return (
-    <div className="work-card">
-      <div>
-        <img src={project.image} alt={project.title} />
-      </div>
+    <CardWrapper id={id}>
+      <img
+        src={`images/${project.image}`}
+        alt={project.title}
+        className="card-image"
+      />
       <div className="work-card-content">
-        <h3>{project.title}</h3>
-        <p>{project.about}</p>
-        <div className="tag-container">
-          {project.tags.split(",").map((tag, index) => (
-            <WorkTag key={index} tag={tag} />
-          ))}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "0 16px",
+            color: "#f3e5ab",
+          }}
+        >
+          <h3 className="card-title">{project.title}</h3>
+          <span style={{ fontWeight: 600 }}>{project.year}</span>
         </div>
-        <div>
-          <a href={project.site} target="_blank" rel="noopener noreferrer">
-            View Project
-          </a>
-          <a href={project.code} target="_blank" rel="noopener noreferrer">
-            View Code
-          </a>
+        <ul className="tag-container">
+          {project.tags.split(",").map((tag, index) => (
+            <li key={index}>
+              <WorkTag tag={tag} />
+            </li>
+          ))}
+        </ul>
+        <div className="card-btn-container">
+          {project.site && (
+            <a
+              href={project.site}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-btn"
+            >
+              View Project
+            </a>
+          )}
+          {project.code && (
+            <a
+              href={project.code}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-btn"
+            >
+              View Code
+            </a>
+          )}
         </div>
       </div>
-    </div>
+    </CardWrapper>
   );
 }
