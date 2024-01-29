@@ -21,21 +21,8 @@ const socials = [
 ];
 
 export default function Socials() {
-  const [scrollY, setScrollY] = React.useState(0);
-
-  React.useEffect(() => {
-    function handleScroll() {
-      setScrollY(window.scrollY);
-    }
-    document.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      document.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
-    <motion.div id="social-container" className={scrollY < 500 ? "" : "top"}>
+    <motion.div id="social-container">
       <motion.div id="social-content" whileHover={{ scale: 1.1 }}>
         {socials.map((social, index) => (
           <motion.a

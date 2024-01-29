@@ -8,25 +8,25 @@ import Footer from "./components/footer/Footer";
 
 import "./App.css";
 
-function PageDivider() {
-  return (
-    <div
-      style={{
-        width: "100%",
-        height: "100px",
-      }}
-    ></div>
-  );
-}
+// function PageDivider() {
+//   return (
+//     <div
+//       style={{
+//         width: "100%",
+//         height: "100px",
+//       }}
+//     ></div>
+//   );
+// }
 
 function App() {
   return (
     <>
       <Socials />
       <Landing />
-      <PageDivider />
+      {/* <PageDivider /> */}
       <Work />
-      <PageDivider />
+      {/* <PageDivider /> */}
       <Skills />
       <Footer />
     </>

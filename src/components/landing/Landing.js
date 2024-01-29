@@ -17,13 +17,13 @@ const containerVariants = {
 const fromTop = {
   hidden: {
     opacity: 0,
-    y: -24,
+    y: -64,
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1,
+      duration: 1.5,
       mass: 0.2,
       damping: 8,
       type: "spring",
@@ -31,53 +31,52 @@ const fromTop = {
   },
 };
 
-const fromBottom = {
-  hidden: {
-    opacity: 0,
-    y: 24,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      mass: 0.1,
-      damping: 10,
-      type: "spring",
-    },
-  },
-};
+// const fromBottom = {
+//   hidden: {
+//     opacity: 0,
+//     y: 24,
+//   },
+//   visible: {
+//     opacity: 1,
+//     y: 0,
+//     transition: {
+//       duration: 0.5,
+//       mass: 0.1,
+//       damping: 10,
+//       type: "spring",
+//     },
+//   },
+// };
 
-const enterSite = () => {
-  const work = document.getElementsByClassName("page-container")[1];
-  window.scrollTo({ top: work.offsetTop, behavior: "smooth" });
-};
+// const enterSite = () => {
+//   const work = document.getElementsByClassName("page-container")[1];
+//   window.scrollTo({ top: work.offsetTop, behavior: "smooth" });
+// };
 
 export default function Landing() {
   return (
-    <div className="page-container">
-      <motion.div
-        id="landing-container"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.img
-          id="avatar"
-          src="images/Avatar-Bridge.jpg"
-          alt="profile"
-          variants={fromTop}
-        />
-        <motion.h1 id="wesley-chappell" variants={fromTop}>
-          Wesley Chappell
-        </motion.h1>
-        <motion.div id="software-engineer" variants={fromTop}>
-          <Title />
-        </motion.div>
-        <div style={{ height: "3rem", width: "100%" }}>
-          <div id="landing-bar" />
-        </div>
-        {/* <motion.button
+    <motion.div
+      id="landing-container"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.img
+        id="avatar"
+        src="images/Avatar-Bridge.jpg"
+        alt="profile"
+        variants={fromTop}
+      />
+      <motion.h1 id="wesley-chappell" variants={fromTop}>
+        Wesley Chappell
+      </motion.h1>
+      <motion.div id="software-engineer" variants={fromTop}>
+        <Title />
+      </motion.div>
+      <div style={{ height: "3rem", width: "100%" }}>
+        <div id="landing-bar" />
+      </div>
+      {/* <motion.button
           className="landing-btn"
           id="btn-intro-open"
           variants={fromBottom}
@@ -86,7 +85,7 @@ export default function Landing() {
         >
           View Intro Video
         </motion.button> */}
-        <motion.button
+      {/* <motion.button
           className="landing-btn"
           id="btn-enter-site"
           variants={fromBottom}
@@ -95,8 +94,7 @@ export default function Landing() {
           onClick={enterSite}
         >
           View Work
-        </motion.button>
-      </motion.div>
-    </div>
+        </motion.button> */}
+    </motion.div>
   );
 }

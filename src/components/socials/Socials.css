@@ -1,6 +1,6 @@
 #social-container {
   position: fixed;
-  bottom: 2vh;
+  top: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,16 +8,6 @@
   height: 48px;
   z-index: 50;
   transition: all 0.3s ease;
-}
-
-@media screen and (min-width: 768px) {
-  #social-container {
-    bottom: 8vh;
-  }
-}
-
-#social-container.top {
-  bottom: 87vh;
 }
 
 #social-content {

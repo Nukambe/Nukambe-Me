@@ -13,10 +13,9 @@ body,
   font-size: 16px;
   line-height: 1.5;
   height: 100%;
-  background: #f5f5f5;
 }
 
-.page-container {
+/* .page-container {
   min-height: 100%;
   padding: 0;
   display: flex;
@@ -24,4 +23,4 @@ body,
   position: relative;
   background: linear-gradient(225deg, #f3e5ab 20%, #edeade 100%);
   background-attachment: fixed;
-}
+} */
