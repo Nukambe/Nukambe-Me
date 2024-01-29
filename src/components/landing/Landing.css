@@ -1,0 +1,58 @@
+#landing-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(225deg, #f3e5ab 20%, #edeade 100%);
+  background-attachment: fixed;
+}
+
+#avatar {
+  width: 300px;
+  border-radius: 2em;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+#wesley-chappell {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #7d6608;
+}
+
+#landing-bar {
+  width: 90%;
+  max-width: 500px;
+  height: 5px;
+  border-radius: 99em;
+  margin: 1rem auto;
+  animation: bar 0.5s;
+  background: linear-gradient(to right, #f3e5ab 0%, #7d6608 50%, #f3e5ab 100%);
+}
+
+@keyframes bar {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.landing-btn {
+  width: 90%;
+  max-width: 300px;
+  height: 36px;
+  margin: 1rem auto;
+  border: none;
+  border-radius: 2em;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background: #b7950b;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s;
+}
