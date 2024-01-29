@@ -1,6 +1,6 @@
 #modal-card {
-  height: 95vh;
-  width: 95vw;
+  height: 95%;
+  width: 95%;
   background-color: #7d6608;
   border-radius: 1em;
   position: relative;
@@ -29,7 +29,7 @@
 #modal-content {
   display: flex;
   flex-direction: column;
-  height: 50%;
+  /* height: 50%; */
 }
 
 #modal-info {
@@ -52,6 +52,12 @@
 }
 
 @media screen and (max-width: 400px) {
+  #modal-info h1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
   #modal-skills {
     display: none;
   }

@@ -1,6 +1,6 @@
 #social-container {
   position: fixed;
-  bottom: 0vh;
+  bottom: 2vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,7 @@
 }
 
 #social-container.top {
-  bottom: 90vh;
+  bottom: 87vh;
 }
 
 #social-content {
