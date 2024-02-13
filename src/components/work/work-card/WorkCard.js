@@ -67,6 +67,7 @@ export default function WorkCard({ id, project }) {
               className="card-btn"
               whileHover={{ y: -4 }}
               transition={{ duration: 0.1 }}
+              onClick={(e) => e.stopPropagation()}
             >
               View Project
             </motion.a>
@@ -79,6 +80,7 @@ export default function WorkCard({ id, project }) {
               className="card-btn"
               whileHover={{ y: -4 }}
               transition={{ duration: 0.1 }}
+              onClick={(e) => e.stopPropagation()}
             >
               View Code
             </motion.a>
