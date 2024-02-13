@@ -54,6 +54,11 @@ export default function WorkModal({ project, closeModal }) {
               )}
             </div>
           </div>
+          <p>
+            Take a look at the example GitHub <strong>Issue</strong> and{" "}
+            <strong>PR</strong> below to see how I work to solve problems and
+            implement new features.
+          </p>
           {issue && (
             <div ref={issueRef} id="sample-issue">
               <h2>Example Issue</h2>
@@ -79,8 +84,12 @@ export default function WorkModal({ project, closeModal }) {
               <p>{issue.expected}</p>
               <h4>Actual Behavior</h4>
               <p>{issue.actual}</p>
-              <h4>Possible Solution</h4>
-              <p>{issue.solution}</p>
+              {issue.solution && (
+                <>
+                  <h4>Possible Solution</h4>
+                  <p>{issue.solution}</p>
+                </>
+              )}
               <h4>Environment</h4>
               <ul>
                 {Object.entries(issue.environment).map(
