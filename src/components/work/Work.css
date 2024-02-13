@@ -4,8 +4,10 @@
 }
 
 #work-heading {
+  font-family: "M PLUS Rounded 1c", "Roboto", sans-serif;
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 800;
+  color: #6e5905;
   margin-bottom: 1rem;
   text-align: center;
   height: 10%;

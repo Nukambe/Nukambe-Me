@@ -10,6 +10,7 @@ export default function Work() {
   const [selectedId, setSelectedId] = React.useState(null);
 
   React.useEffect(() => {
+    // Prevent scrolling when modal is open
     if (selectedId !== null) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "auto";
   });

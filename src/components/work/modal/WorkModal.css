@@ -2,17 +2,17 @@
   height: 95%;
   width: 95%;
   background-color: #7d6608;
-  border-radius: 1em;
+  border-radius: 1em 0 0 1em;
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
   z-index: 100;
 }
 
 #btn-close-modal {
   display: flex;
-  position: absolute;
-  top: 0.5em;
-  right: 0.5em;
+  position: fixed;
+  top: 2em;
+  right: 4em;
   justify-content: center;
   align-items: center;
   background-color: unset;
@@ -20,19 +20,21 @@
   height: 64px;
   width: 64px;
   cursor: pointer;
+  z-index: 100;
 }
 
 #modal-image {
   width: 100%;
   height: 33%;
   object-fit: cover;
-  border-radius: 1em 1em 0 0;
+  /* border-radius: 1em 1em 0 0; */
 }
 
 #modal-content {
   display: flex;
   flex-direction: column;
-  /* height: 50%; */
+  padding: 1em 0;
+  position: relative;
 }
 
 #modal-info {
@@ -45,24 +47,48 @@
   color: #f3e5ab;
 }
 
+#sample-issue,
+#sample-pull {
+  background-color: #f3e5ab;
+  color: black;
+  padding: 0 0.5em;
+  border-radius: 0.5em;
+  margin: 0.5em 0;
+  max-width: 800px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#sample-issue > h2,
+#sample-pull > h2 {
+  border-bottom: 1px solid #7d6608;
+  padding: 0.5em;
+}
+
+#sample-pull {
+  margin-bottom: 4em;
+}
+
 #modal-skills {
+  height: fit-content;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5em;
   list-style: none;
   padding: 0;
-  margin: auto;
+  margin: 0 auto;
+  position: sticky;
+  top: 64px;
 }
 
-@media screen and (max-width: 400px) {
-  #modal-info h1 {
-    display: none;
+@media screen and (max-width: 660px) {
+  #btn-close-modal {
+    right: 2em;
   }
 }
 
-@media screen and (max-width: 640px) {
-  #modal-skills {
-    display: none;
+@media screen and (min-width: 1600px) {
+  #btn-close-modal {
+    right: 6em;
   }
 }
 
@@ -70,4 +96,15 @@
   #modal-content {
     flex-direction: row;
   }
+}
+
+pre {
+  color: black;
+  background-color: white;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  font-size: 0.8em;
+  font-weight: 600;
+  margin: 0;
+  overflow-x: auto;
 }
