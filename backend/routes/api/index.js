@@ -1,10 +1,18 @@
 const router = require("express").Router();
-const asyncHandler = require("express-async-handler");
-const {
-  setTokenCookie,
-  restoreUser,
-  requireAuth,
-} = require("../../utils/auth.js");
-const { User } = require("../../db/models");
+const sessionRouter = require("./session.js");
+const certificationsRouter = require("./certifications.js");
+const profileRouter = require("./profile.js");
+const projectsRouter = require("./projects.js");
+const skillsRouter = require("./skills.js");
+
+router.use("/session", sessionRouter);
+router.use("/certifications", certificationsRouter);
+router.use("/profile", profileRouter);
+router.use("/projects", projectsRouter);
+router.use("/skills", skillsRouter);
+
+router.post("/test", (req, res) => {
+  res.json({ requestBody: req.body });
+});
 
 module.exports = router;
