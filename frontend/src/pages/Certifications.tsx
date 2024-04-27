@@ -13,7 +13,7 @@ export const loader = (dispatch: any) => async () => {
 export default function CertificationsPage() {
   const certifications = useAppSelector(selectCertifications)
   return (
-    <div>
+    <div id="certifications">
       <h1>Certifications</h1>
       <p>Welcome to the certifications page!</p>
       <CertificationContainer certifications={certifications} />

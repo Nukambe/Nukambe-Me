@@ -1,24 +1,32 @@
-import { Outlet } from "react-router-dom"
 import "./App.css"
+import Footer from "./features/footer/Footer"
+import Navbar from "./features/navbar/Navbar"
+import CertificationsPage from "./pages/Certifications"
+import ContactPage from "./pages/ContactPage"
+import HomePage from "./pages/HomePage"
+import ToolsPage from "./pages/ToolsPage"
+import WorkPage from "./pages/WorkPage"
+
+const Spacer = ({ height = 128 }) => <div style={{ height }} />
 
 const App = () => {
   return (
-    <div>
-      <nav>
-        <ul>
-          <li>
-            <a href="/dashboard">Dashboard</a>
-          </li>
-          <li>
-            <a href="/certifications">Certifications</a>
-          </li>
-          <li>
-            <a href="/skills">Skills</a>
-          </li>
-        </ul>
-      </nav>
-      <Outlet />
-    </div>
+    <>
+      <div style={{ width: "80%", margin: "auto" }}>
+        <Navbar />
+        <Spacer height={32} />
+        <HomePage />
+        <Spacer />
+        <WorkPage />
+        <Spacer />
+        <CertificationsPage />
+        <Spacer />
+        <ToolsPage />
+        <Spacer />
+        <ContactPage />
+      </div>
+      <Footer />
+    </>
   )
 }
 

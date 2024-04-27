@@ -5,7 +5,7 @@ import DashboardPage from "./pages/Dashboard"
 import CertificationsPage, {
   loader as certificationsLoader,
 } from "./pages/Certifications"
-import SkillsPage from "./pages/SkillsPage"
+import SkillsPage from "./pages/ToolsPage"
 
 export default function Routes() {
   const dispatch = useAppDispatch()
@@ -13,14 +13,8 @@ export default function Routes() {
     {
       path: "/",
       element: <App />,
-      // errorElement: <div>404 Not Found</div>,
-      children: [
-        {
-          path: "certifications",
-          element: <CertificationsPage />,
-          loader: certificationsLoader(dispatch),
-        },
-      ],
+      errorElement: <div>404 Not Found</div>,
+      loader: certificationsLoader(dispatch),
     },
     {
       path: "/dashboard",
