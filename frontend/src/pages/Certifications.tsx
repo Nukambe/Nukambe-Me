@@ -1,22 +1,14 @@
 import { useAppSelector } from "../app/hooks"
 import CertificationContainer from "../features/certifications/CertificationContainer"
-import {
-  getAllCertifications,
-  selectCertifications,
-} from "../features/certifications/certificationSlice"
-
-export const loader = (dispatch: any) => async () => {
-  await dispatch(getAllCertifications())
-  return null
-}
+import { selectCertifications } from "../features/certifications/certificationSlice"
+import PageContainer from "./PageContainer"
 
 export default function CertificationsPage() {
   const certifications = useAppSelector(selectCertifications)
   return (
-    <div id="certifications">
-      <h1>Certifications</h1>
-      <p>Welcome to the certifications page!</p>
+    <PageContainer id="certifications">
+      <h2>Certifications</h2>
       <CertificationContainer certifications={certifications} />
-    </div>
+    </PageContainer>
   )
 }

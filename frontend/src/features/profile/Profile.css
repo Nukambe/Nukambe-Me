@@ -5,14 +5,63 @@
   margin-bottom: 20px;
 }
 
+.profile h2 {
+  font-size: 2em;
+  margin: 0;
+  text-align: left;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-right: 64px;
+  position: relative;
+  background-image: url("https://toptal.com/designers/subtlepatterns/uploads/triangle-mosaic.png");
+}
+
+.profile-container p {
+  color: #6c757d;
+  text-align: center;
+}
+
 .headshot {
   width: 256px;
   height: 256px;
   border-radius: 50%;
-  margin-right: 64px;
+  margin: auto;
   object-fit: cover;
 }
 
 .about-me {
   max-width: 400px;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+@media screen and (max-width: 900px) {
+  .profile {
+    flex-direction: column;
+  }
+
+  .profile-container {
+    margin-right: 0;
+    margin-bottom: 64px;
+  }
+
+  .profile h2 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .about-me {
+    max-width: 600px;
+    font-size: 1.5em;
+    text-align: center;
+  }
 }

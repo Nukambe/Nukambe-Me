@@ -8,8 +8,8 @@ export default function HomePage() {
       <Profile />
       <Quote
         quote={{
-          text: "“Code is like humor. When you have to explain it, it’s bad.”",
-          author: "Cory House",
+          text: "“Success is not final. Failure is not fatal...”",
+          author: "Winston Churchill",
         }}
       />
     </div>

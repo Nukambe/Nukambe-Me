@@ -18,10 +18,22 @@ export default function ContactForm() {
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
-    // Handle form submission logic here, like sending data to a server
-    console.log("Form data submitted:", formData)
-    alert("Thank you for your message!")
-    // Reset form after submission for user convenience
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then(res => {
+        if (!res.ok) {
+          throw new Error("Network response was not ok")
+        }
+        return res.json()
+      })
+      .then(data => {
+        alert(data.message)
+      })
     setFormData({ name: "", email: "", message: "" })
   }
 
@@ -33,6 +45,7 @@ export default function ContactForm() {
           type="text"
           id="name"
           name="name"
+          autoComplete="name"
           value={formData.name}
           onChange={handleChange}
           required
@@ -44,6 +57,7 @@ export default function ContactForm() {
           type="email"
           id="email"
           name="email"
+          autoComplete="email"
           value={formData.email}
           onChange={handleChange}
           required

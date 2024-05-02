@@ -4,8 +4,7 @@ import PageContainer from "./PageContainer"
 export default function ToolsPage() {
   return (
     <PageContainer id="tools">
-      <h1>Tools</h1>
-      <p>Welcome to the tools page!</p>
+      <h2>Tools</h2>
       <ToolGallery />
     </PageContainer>
   )

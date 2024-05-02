@@ -8,10 +8,9 @@ export default function CertificationCard({
 }) {
   return (
     <div className="cert-card">
-      <h2>{certification.title}</h2>
-      <span className="issuer">{certification.issuer}</span>
-      <span className="date">{certification.issueDate}</span>
-      <span className="date">{certification.expirationDate}</span>
+      <h3>{certification.title}</h3>
+      <p className="date">{certification.issueDate}</p>
+      <p className="issuer">{certification.issuer}</p>
       <img src={certification.image} alt={certification.title} />
     </div>
   )

@@ -1,19 +1,12 @@
 import React from "react"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import "./Tool.css"
-
-export type ToolType = {
-  name: string
-  description: string
-  image: string
-}
+import type { Tool as ToolType } from "./toolSlice"
 
 export default function Tool({
-  id,
   tool,
   columns,
 }: {
-  id: number
   tool: ToolType
   columns: number
 }) {
@@ -27,32 +20,26 @@ export default function Tool({
       whileInView={{
         y: 0,
         opacity: 1,
-        transition: { delay: (id % columns) * 0.05 },
+        transition: { delay: (tool.id % columns) * 0.05 },
       }}
       viewport={{ once: true }}
       whileHover={{ scale: 1.1 }}
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <AnimatePresence>
-        {hover && (
-          <motion.div
-            key={id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2 }}
-            exit={{ opacity: 0, y: 20 }}
-            className="tool-tooltip"
-          >
-            {tool.name}
-          </motion.div>
-        )}
-      </AnimatePresence>
-      <img
-        ref={iconRef}
-        src={`images/tools/${tool.name.toLowerCase()}.png`}
-        alt={tool.name}
-      />
+      {hover && (
+        <motion.div
+          key={tool.id}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2 }}
+          exit={{ opacity: 0, y: 20 }}
+          className="tool-tooltip"
+        >
+          {tool.title}
+        </motion.div>
+      )}
+      <img ref={iconRef} src={tool.image} alt={tool.title} />
     </motion.li>
   )
 }

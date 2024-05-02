@@ -7,13 +7,10 @@ export default function Footer() {
         <p>© 2024 Wesley Chappell. All rights reserved.</p>
         <ul className="social-links">
           <li>
-            <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/weschap/">LinkedIn</a>
           </li>
           <li>
-            <a href="https://github.com/yourusername">GitHub</a>
-          </li>
-          <li>
-            <a href="https://twitter.com/yourhandle">Twitter</a>
+            <a href="https://github.com/Nukambe">GitHub</a>
           </li>
         </ul>
         <p>

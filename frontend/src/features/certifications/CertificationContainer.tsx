@@ -9,12 +9,15 @@ export default function CertificationContainer({
 }) {
   return (
     <div className="cert-container">
-      {certifications.map(certification => (
-        <CertificationCard
-          key={certification.id}
-          certification={certification}
-        />
-      ))}
+      {certifications
+        .slice()
+        .reverse()
+        .map(certification => (
+          <CertificationCard
+            key={certification.id}
+            certification={certification}
+          />
+        ))}
     </div>
   )
 }

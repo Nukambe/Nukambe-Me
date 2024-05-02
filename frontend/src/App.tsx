@@ -12,9 +12,9 @@ const Spacer = ({ height = 128 }) => <div style={{ height }} />
 const App = () => {
   return (
     <>
-      <div style={{ width: "80%", margin: "auto" }}>
+      <div className="content-container">
         <Navbar />
-        <Spacer height={32} />
+        <Spacer height={64} />
         <HomePage />
         <Spacer />
         <WorkPage />
