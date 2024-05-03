@@ -116,7 +116,6 @@ export const getAllCertifications = createAsyncThunk(
       throw new Error("Failed to fetch certifications")
     }
     const data = await response.json()
-    console.log(data)
     return data as Certification[]
   },
 )

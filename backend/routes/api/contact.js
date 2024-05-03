@@ -44,10 +44,8 @@ router.post(
 
     transporter.sendMail(mailData, (err, info) => {
       if (err) {
-        console.log(err);
         res.status(500).json({ message: "Internal server error" });
       } else {
-        console.log(info);
         const mailDataReply = {
           from: process.env.CONTACT_EMAIL,
           to: email,
@@ -56,10 +54,8 @@ router.post(
         };
         transporter.sendMail(mailDataReply, (err, info) => {
           if (err) {
-            console.log(err);
             res.status(500).json({ message: "Internal server error" });
           } else {
-            console.log(info);
             res.status(200).json({ message: "Message received" });
           }
         });
