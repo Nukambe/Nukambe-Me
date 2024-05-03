@@ -10,6 +10,8 @@ import WorkPage from "./pages/WorkPage"
 const Spacer = ({ height = 128 }) => <div style={{ height }} />
 
 const App = () => {
+  document.title = "Wesley Chappell"
+
   return (
     <>
       <div className="content-container">
