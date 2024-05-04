@@ -1,9 +1,0 @@
-.socials {
-  display: flex;
-  gap: 8px;
-  list-style: none;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 16px;
-}
