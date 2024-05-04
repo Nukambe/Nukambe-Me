@@ -13,9 +13,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
-    // "types": ["vitest/globals"],
-    // "typeRoots": ["./node_modules/@types", "./types"]
+    "jsx": "react-jsx",
+    "types": ["vitest/globals"]
   },
   "references": [{ "path": "./tsconfig.node.json" }]
 }

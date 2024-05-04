@@ -1,5 +1,4 @@
 import Socials from "../socials/Socials"
-import headshot from "./Avatar-Bridge.jpg"
 import "./Profile.css"
 
 export default function Profile() {
@@ -7,7 +6,11 @@ export default function Profile() {
     <div className="profile">
       <div className="profile-container">
         <Socials />
-        <img src={headshot} alt="Headshot" className="headshot" />
+        <img
+          src="/images/Avatar-Bridge.jpg"
+          alt="Headshot"
+          className="headshot"
+        />
         <h1>Wesley Alexander Chappell</h1>
         <p>
           Versatile Software Engineer Specializing in Development and Technical

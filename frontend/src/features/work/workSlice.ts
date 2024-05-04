@@ -1,8 +1,6 @@
 import type { PayloadAction } from "@reduxjs/toolkit"
 import { createAppSlice } from "../../app/createAppSlice"
 import type { RootState } from "../../app/store"
-import moriah_ss from "./media/moriah-ss.png"
-import forms_ss from "./media/forms-ss.png"
 
 enum LoadingStatus {
   loading,
@@ -79,7 +77,7 @@ const initialState: WorkState = {
       title: "Forms App",
       description:
         "The Hospital Forms Management App is an in-house developed web application tailored for a healthcare setting. It enables hospital staff to create, distribute, and analyze custom forms similar to those offered by Microsoft Forms. This tool was designed to streamline the collection and management of hospital data, ranging from patient feedback to internal audits and staff assessments.",
-      image: forms_ss,
+      image: "/images/forms-ss.png",
       tags: [
         "Express",
         "JWT",
@@ -116,7 +114,7 @@ const initialState: WorkState = {
       title: "Moriah Young",
       description: `The Moriah Young website is a custom-developed portfolio designed to showcase the diverse talents of actress Moriah Young. The site features multimedia integration, including on-camera and voice acting reels, allowing directors and casting agents to explore her work comprehensively.
         The development of moriahyoung.com involved extensive collaboration with the client, Moriah Young, to ensure the website accurately represents her artistic persona and meets her specific needs. The project entailed numerous iterations and feedback cycles, demonstrating a flexible and client-focused approach. This constant communication was key to refining the site’s features and functionalities, ensuring each element from the layout to the multimedia integrations was perfectly aligned with the client’s expectations.`,
-      image: moriah_ss,
+      image: "/images/moriah-ss.png",
       tags: [
         "React",
         "EmailJS",
