@@ -10,14 +10,13 @@ export default defineConfig({
       "/api": {
         target: "http://localhost:5000",
         changeOrigin: true,
-        // rewrite: path => path.replace(/^\/api/, ""),
       },
     },
   },
-  // test: {
-  //   globals: true,
-  //   environment: "jsdom",
-  //   setupFiles: "src/setupTests",
-  //   mockReset: true,
-  // },
+  test: {
+    globals: true,
+    environment: "jsdom",
+    setupFiles: "src/setupTests",
+    mockReset: true,
+  },
 })
