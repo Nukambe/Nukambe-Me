@@ -1,0 +1,13 @@
+.cert-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(284px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+@media screen and (max-width: 360px) {
+  .cert-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
