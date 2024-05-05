@@ -13,9 +13,9 @@ app.use(morgan("dev"));
 app.use(cookieParser());
 app.use(express.json());
 
-if (!isProduction) {
-  app.use(cors());
-}
+// if (!isProduction) {
+//   app.use(cors());
+// }
 
 app.use(
   helmet.crossOriginResourcePolicy({
@@ -44,7 +44,7 @@ app.use((err, _req, res, _next) => {
     title: err.title || "Server Error",
     message: err.message,
     errors: err.errors,
-    stack: isProduction ? null : err.stack,
+    // stack: isProduction ? null : err.stack,
   });
 });
 module.exports = app;
