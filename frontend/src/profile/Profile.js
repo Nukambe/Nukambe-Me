@@ -62,7 +62,7 @@ export default function Profile() {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/fK7pV0Wic1Y"
+              src="https://www.youtube.com/embed/FHgoTZ3y9b8"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             ></iframe>

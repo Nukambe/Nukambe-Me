@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const nodemailer = require("nodemailer");
-const { check, validationResult, body } = require("express-validator");
+const { validationResult, body } = require("express-validator");
 require("dotenv").config();
 
 const transporter = nodemailer.createTransport({
@@ -14,6 +14,24 @@ const transporter = nodemailer.createTransport({
   },
   secure: true,
 });
+
+const mailData = (name, email, message) => {
+  return {
+    from: process.env.CONTACT_EMAIL,
+    to: process.env.TO_EMAIL,
+    subject: `Message from ${name} <${email}>`,
+    text: message,
+  };
+};
+
+const mailDataReply = (email) => {
+  return {
+    from: process.env.CONTACT_EMAIL,
+    to: email,
+    subject: "Thank you for your message",
+    text: ``,
+  };
+};
 
 router.post(
   "/",
@@ -34,15 +52,12 @@ router.post(
     .withMessage("Message is required"),
   (req, res) => {
     const { name, email, message } = req.body;
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ message: errors.array() });
+    }
 
-    const mailData = {
-      from: process.env.CONTACT_EMAIL,
-      to: process.env.TO_EMAIL,
-      subject: `Message from ${name} <${email}>`,
-      text: message,
-    };
-
-    transporter.sendMail(mailData, (err, info) => {
+    transporter.sendMail(mailData(name, email, message), (err, _info) => {
       if (err) {
         res.status(500).json({ message: "Internal server error" });
       } else {
