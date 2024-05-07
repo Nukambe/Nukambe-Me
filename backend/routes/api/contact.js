@@ -3,6 +3,7 @@ const router = express.Router();
 const nodemailer = require("nodemailer");
 const { validationResult, body } = require("express-validator");
 require("dotenv").config();
+const fs = require("fs");
 
 const transporter = nodemailer.createTransport({
   port: 465,
@@ -29,7 +30,8 @@ const mailDataReply = (email) => {
     from: process.env.CONTACT_EMAIL,
     to: email,
     subject: "Thank you for your message",
-    text: ``,
+    text: "I will get back to you as soon as possible",
+    html: fs.readFileSync("./autoReply.html", { encoding: "utf-8" }),
   };
 };
 
@@ -61,13 +63,7 @@ router.post(
       if (err) {
         res.status(500).json({ message: "Internal server error" });
       } else {
-        const mailDataReply = {
-          from: process.env.CONTACT_EMAIL,
-          to: email,
-          subject: "Thank you for your message",
-          text: "I will get back to you as soon as possible",
-        };
-        transporter.sendMail(mailDataReply, (err, info) => {
+        transporter.sendMail(mailDataReply(email), (err, _info) => {
           if (err) {
             res.status(500).json({ message: "Internal server error" });
           } else {
