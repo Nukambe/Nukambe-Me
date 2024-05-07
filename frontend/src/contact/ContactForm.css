@@ -67,3 +67,15 @@
   height: 150px; /* Increased height for text area */
   resize: none; /* Disables resize option */
 }
+
+.contact-form input:disabled,
+.contact-form textarea:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+}
+
+.contact-form button:disabled {
+  background-color: #f0f0f0;
+  color: #b3b3b3;
+  cursor: not-allowed;
+}

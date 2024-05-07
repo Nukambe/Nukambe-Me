@@ -4,6 +4,7 @@ const nodemailer = require("nodemailer");
 const { validationResult, body } = require("express-validator");
 require("dotenv").config();
 const fs = require("fs");
+const path = require("path");
 
 const transporter = nodemailer.createTransport({
   port: 465,
@@ -26,12 +27,15 @@ const mailData = (name, email, message) => {
 };
 
 const mailDataReply = (email) => {
+  const htmlFilePath = path.join(__dirname, "autoReply.html");
+  const autoReply = fs.readFileSync(htmlFilePath, { encoding: "utf-8" });
+
   return {
     from: process.env.CONTACT_EMAIL,
     to: email,
     subject: "Thank you for your message",
     text: "I will get back to you as soon as possible",
-    html: fs.readFileSync("./autoReply.html", { encoding: "utf-8" }),
+    html: autoReply,
   };
 };
 

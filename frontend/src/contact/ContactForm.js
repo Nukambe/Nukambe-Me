@@ -2,6 +2,7 @@ import React from "react";
 import "./ContactForm.css";
 
 export default function ContactForm() {
+  const [submitting, setSubmitting] = React.useState(false);
   const [formData, setFormData] = React.useState({
     name: "",
     email: "",
@@ -18,6 +19,7 @@ export default function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setSubmitting(true);
     fetch("/api/contact", {
       method: "POST",
       headers: {
@@ -26,15 +28,16 @@ export default function ContactForm() {
       body: JSON.stringify(formData),
     })
       .then((res) => {
-        if (!res.ok) {
-          throw new Error("Network response was not ok");
-        }
+        // if (!res.ok) {
+        //   throw new Error("Network response was not ok");
+        // }
         return res.json();
       })
       .then((data) => {
         alert(data.message);
+        setSubmitting(false);
+        setFormData({ name: "", email: "", message: "" });
       });
-    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
@@ -49,6 +52,7 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           required
+          disabled={submitting}
         />
       </div>
       <div>
@@ -61,6 +65,7 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           required
+          disabled={submitting}
         />
       </div>
       <div>
@@ -71,9 +76,12 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           required
+          disabled={submitting}
         />
       </div>
-      <button type="submit">Send</button>
+      <button type="submit" disabled={submitting}>
+        Send
+      </button>
     </form>
   );
 }
