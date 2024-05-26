@@ -34,7 +34,7 @@
   text-decoration: underline; /* Add underline on hover */
 }
 
-a {
+footer a {
   color: #f39c12; /* Gold color for normal links */
   text-decoration: none; /* No underline */
 }
