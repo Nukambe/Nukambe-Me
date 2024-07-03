@@ -55,14 +55,14 @@ const certifications = [
   //   image:
   //     "https://media.licdn.com/dms/image/D560BAQHINJThzx5wHg/company-logo_100_100/0/1712788094054/comptia_logo?e=1722470400&v=beta&t=pM5xQ3PB3ah3WNcHeEmImNzdB4qzGj6VGx_NHgPqBCo",
   // },
-  // {
-  //   id: 7,
-  //   title: "AWS Certified Cloud Practitioner",
-  //   issuer: "Amazon Web Services",
-  //   issueDate: "June 2024",
-  //   image:
-  //     "https://www.wgu.edu/online-it-degrees/software-engineering-bachelors-program/_jcr_content/root/container_1438590742_2047518538/columncontrol_copy_c/column-2/columncontrol_copy_c/column-1/image_copy_copy_979611358.coreimg.85.320.png/1701120448673/aws-aws-logo-rgb---natasha-zabohonski-copy.png",
-  // },
+  {
+    id: 7,
+    title: "AWS Certified Cloud Practitioner",
+    issuer: "Amazon Web Services",
+    issueDate: "June 2024",
+    image:
+      "https://www.wgu.edu/online-it-degrees/software-engineering-bachelors-program/_jcr_content/root/container_1438590742_2047518538/columncontrol_copy_c/column-2/columncontrol_copy_c/column-1/image_copy_copy_979611358.coreimg.85.320.png/1701120448673/aws-aws-logo-rgb---natasha-zabohonski-copy.png",
+  },
   // {
   //   id: 8,
   //   title: "Front-End Developer",
