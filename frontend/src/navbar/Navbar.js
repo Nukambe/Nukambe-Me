@@ -34,8 +34,12 @@ export default function Navbar() {
     e.preventDefault();
     const element = document.getElementById(id);
     if (element) {
+      document.body.style.pointerEvents = "none"; // prevent hover effects while scrolling
       element.scrollIntoView({ behavior: "smooth" });
       setOpen(false);
+      setTimeout(() => { // re-enable hover effects after scrolling
+        document.body.style.pointerEvents = "auto";
+      }, 1000);
     }
   };
 

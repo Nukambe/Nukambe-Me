@@ -54,7 +54,6 @@ export default function Profile() {
           <div className="video-modal-content">
             <button
               className="close-modal"
-              style={{ fontSize: "1.5em" }}
               onClick={() => setModal(false)}
             >
               X

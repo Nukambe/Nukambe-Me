@@ -102,6 +102,18 @@
   height: 720px;
 }
 
+.close-modal {
+  position: absolute;
+  top: 48px;
+  right: 48px;
+  font-size: 3em;
+  color: white;
+  cursor: pointer;
+  background-color: unset;
+  border: none;
+  height: 64px;
+}
+
 @media screen and (max-width: 900px) {
   .profile {
     flex-direction: column;
@@ -149,5 +161,10 @@
   .video-modal-content {
     width: 100%;
     height: 270px;
+  }
+
+  .close-modal {
+    top: 48px;
+    right: 0px;
   }
 }
