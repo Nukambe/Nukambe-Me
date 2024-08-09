@@ -19,7 +19,7 @@ export default function Profile() {
         <div className="profile-container">
           <Socials />
           <img
-            src="/images/Avatar-Field.jpg"
+            src="/images/Avatar-Bridge.jpg"
             alt="Headshot"
             className="headshot"
           />

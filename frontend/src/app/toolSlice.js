@@ -137,13 +137,13 @@ const tools = [
     description: "Proficient in version control using Git.",
     image: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg",
   },
-  // {
-  //   id: 21,
-  //   title: "Java",
-  //   description: "Proficient in building applications using Java.",
-  //   image:
-  //     "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1200px-Java_programming_language_logo.svg.png",
-  // },
+  {
+    id: 21,
+    title: "Java",
+    description: "Proficient in building applications using Java.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1200px-Java_programming_language_logo.svg.png",
+  },
   // {
   //   id: 22,
   //   title: "Spring Boot",
@@ -152,13 +152,13 @@ const tools = [
   //   image:
   //     "https://upload.wikimedia.org/wikipedia/commons/7/79/Spring_Boot.svg",
   // },
-  // {
-  //   id: 24,
-  //   title: "Python",
-  //   description: "Proficient in building applications using Python.",
-  //   image:
-  //     "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
-  // },
+  {
+    id: 24,
+    title: "Python",
+    description: "Proficient in building applications using Python.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+  },
   // {
   //   id: 25,
   //   title: "Django",
@@ -167,14 +167,14 @@ const tools = [
   //   image:
   //     "https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg",
   // },
-  // {
-  //   id: 26,
-  //   title: "Flask",
-  //   description:
-  //     "Proficient in building server-side applications using Flask.",
-  //   image:
-  //     "https://flask.palletsprojects.com/en/3.0.x/_images/flask-horizontal.png",
-  // },
+  {
+    id: 26,
+    title: "Flask",
+    description:
+      "Proficient in building server-side applications using Flask.",
+    image:
+      "https://flask.palletsprojects.com/en/3.0.x/_images/flask-horizontal.png",
+  },
 ];
 
 export default tools;
