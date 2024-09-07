@@ -1,28 +1,28 @@
 const certifications = [
-  {
-    id: 0,
-    title: "Microsoft Office Specialist: Microsoft Word",
-    issuer: "Microsoft",
-    issueDate: "March 2024",
-    image:
-      "images/companies/microsoft.jpg",
-  },
-  {
-    id: 1,
-    title: "HDI Customer Service Representative",
-    issuer: "HDI",
-    issueDate: "June 2020",
-    image:
-      "images/companies/hdi.jpg",
-  },
-  {
-    id: 2,
-    title: "HDI Support Center Analyst",
-    issuer: "HDI",
-    issueDate: "April 2024",
-    image:
-      "images/companies/hdi.jpg",
-  },
+  // {
+  //   id: 0,
+  //   title: "Microsoft Office Specialist: Microsoft Word",
+  //   issuer: "Microsoft",
+  //   issueDate: "March 2024",
+  //   image:
+  //     "images/companies/microsoft.jpg",
+  // },
+  // {
+  //   id: 1,
+  //   title: "HDI Customer Service Representative",
+  //   issuer: "HDI",
+  //   issueDate: "June 2020",
+  //   image:
+  //     "images/companies/hdi.jpg",
+  // },
+  // {
+  //   id: 2,
+  //   title: "HDI Support Center Analyst",
+  //   issuer: "HDI",
+  //   issueDate: "April 2024",
+  //   image:
+  //     "images/companies/hdi.jpg",
+  // },
   {
     id: 3,
     title: "ITIL® 4 Foundation",
@@ -63,22 +63,22 @@ const certifications = [
     image:
       "images/companies/aws.jpg",
   },
-  // {
-  //   id: 8,
-  //   title: "Front-End Developer",
-  //   issuer: "Western Governors University",
-  //   issueDate: "July 2024",
-  //   image:
-  //     "https://www.wgu.edu/online-it-degrees/software-engineering-bachelors-program/_jcr_content/root/container_1438590742_2047518538/columncontrol_copy_c/column-2/columncontrol_copy_c_1360147832/column-1/image_copy_copy.coreimg.85.320.png/1701120501255/frontend.png",
-  // },
-  // {
-  //   id: 9,
-  //   title: "Back-End Developer",
-  //   issuer: "Western Governors University",
-  //   issueDate: "August 2024",
-  //   image:
-  //     "https://www.wgu.edu/online-it-degrees/software-engineering-bachelors-program/_jcr_content/root/container_1438590742_2047518538/columncontrol_copy_c/column-2/columncontrol_copy_c_1822396297/column-1/image_copy_copy_89859119.coreimg.85.320.png/1689051077428/developer.png",
-  // },
+  {
+    id: 8,
+    title: "Front-End Developer",
+    issuer: "Western Governors University",
+    issueDate: "August 2024",
+    image:
+      "images/companies/frontend.webp",
+  },
+  {
+    id: 9,
+    title: "Back-End Developer",
+    issuer: "Western Governors University",
+    issueDate: "August 2024",
+    image:
+      "images/companies/backend.webp",
+  },
 ];
 
 export default certifications;

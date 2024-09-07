@@ -144,14 +144,14 @@ const tools = [
     image:
       "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1200px-Java_programming_language_logo.svg.png",
   },
-  // {
-  //   id: 22,
-  //   title: "Spring Boot",
-  //   description:
-  //     "Proficient in building server-side applications using Spring Boot.",
-  //   image:
-  //     "https://upload.wikimedia.org/wikipedia/commons/7/79/Spring_Boot.svg",
-  // },
+  {
+    id: 22,
+    title: "Spring Boot",
+    description:
+      "Proficient in building server-side applications using Spring Boot.",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/7/79/Spring_Boot.svg",
+  },
   {
     id: 24,
     title: "Python",

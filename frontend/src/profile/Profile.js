@@ -19,14 +19,13 @@ export default function Profile() {
         <div className="profile-container">
           <Socials />
           <img
-            src="/images/Avatar-Bridge.jpg"
+            src="/images/Avatar-Field.jpg"
             alt="Headshot"
             className="headshot"
           />
           <h1>Wesley Alexander Chappell</h1>
           <p>
-            Versatile Software Engineer Specializing in Development and
-            Technical Support
+            Versatile Software Engineer Specializing in Full-Stack Development and Problem Solving
           </p>
           <button onClick={() => setModal(true)}>
             Intro
@@ -40,12 +39,9 @@ export default function Profile() {
         <div className="about-me">
           <h2>About Me</h2>
           <p>
-            Hello! I'm a passionate software engineer with a relentless
-            curiosity for all things tech. I thrive on the excitement of
-            learning and embracing new technologies, making me a perpetual
-            student in this ever-evolving digital landscape. With a commitment
-            to innovation and problem-solving, I bring a fresh perspective to
-            every project I undertake.
+            Passionate Software Engineer with expertise in Java, Python, JavaScript, SQL, and OOP.
+            Experienced in full-stack development, working with REST APIs and PostgreSQL and MySQL databases.
+            Strong problem-solving and debugging skills, focused on delivering clean, maintainable code and user-friendly solutions in dynamic environments.
           </p>
         </div>
       </div>

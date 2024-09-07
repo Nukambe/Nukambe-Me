@@ -1,5 +1,37 @@
 const works = [
   {
+    id: 0,
+    title: "Workout Planner",
+    description:
+      "The Workout Planner App is a fitness tool designed to help users create, track, and manage workout routines effectively. This application offers a range of features, including workout planning, exercise customization, and progress reports, to support users in achieving their fitness goals.",
+    image: "/images/gymnav-ss.PNG",
+    tags: [
+      "Java",
+      "Spring Boot",
+      "Hibernate",
+      "PostgreSQL",
+      "Angular",
+      "RxJS",
+      "TypeScript",
+      "HTML",
+      "CSS",
+    ],
+    link: "https://gym.chappelly.com",
+    code: "https://github.com/Nukambe/workout",
+    screenshots: ["https://via.placeholder.com/150"],
+    videoId: "9uXf39uHUzg",
+    githubIssueId: 0,
+    githubPRId: 1,
+    bullets: [
+      "Developed a RESTful API using Spring Boot to manage workout data efficiently, providing robust backend support for the application",
+      "Utilized Hibernate with PostgreSQL for data storage and retrieval, ensuring reliable and scalable data management for user workout routines",
+      "Implemented Angular to create a dynamic and responsive user interface, enabling users to plan and track workouts seamlessly",
+      "Utilized RxJS for efficient asynchronous data handling, ensuring that UI components receive consistent and predictable updates",
+      "Designed a user-friendly workout planner interface that allows users to create custom workout routines, add exercises, and track progress easily",
+      "Implemented user authentication and authorization using JWT to secure user data and ensure that only authorized users can access and modify workout information",
+    ],
+  },
+  {
     id: 1,
     title: "Meal Planner",
     description:
